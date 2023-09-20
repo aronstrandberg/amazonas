@@ -14,4 +14,5 @@ ARG PORT=3000
 ENV PORT $PORT
 EXPOSE $PORT
 
-CMD ["bundle exec puma"]
+ENTRYPOINT ["bundle"]
+CMD ["exec", "puma", "-C", "puma.rb"]
